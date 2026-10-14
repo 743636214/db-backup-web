@@ -1,0 +1,6 @@
+.env
+.npm-cache/
+.idea/
+node_modules/
+data/
+backups/

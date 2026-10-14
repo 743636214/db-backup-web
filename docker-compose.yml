@@ -1,0 +1,15 @@
+services:
+  db-backup-web:
+    build: .
+    container_name: db-backup-web
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "3080:3080"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3080
+      TZ: ${TZ:-Asia/Shanghai}
+    volumes:
+      - ./backups:/backups

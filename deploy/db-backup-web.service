@@ -1,0 +1,18 @@
+[Unit]
+Description=Database Backup Web
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=db-backup-web
+Group=db-backup-web
+WorkingDirectory=/opt/db-backup-web/current
+EnvironmentFile=/opt/db-backup-web/.env
+ExecStart=/usr/bin/node /opt/db-backup-web/current/server.js
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

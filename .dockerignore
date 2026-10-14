@@ -1,0 +1,6 @@
+data
+backups
+node_modules
+.git
+.env
+.npm-cache

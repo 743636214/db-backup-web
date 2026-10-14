@@ -1,0 +1,32 @@
+.modal[hidden] {
+  display: none;
+}
+
+.page-view[hidden] {
+  display: none;
+}
+
+details summary,
+.download-link {
+  color: #3167f4;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details pre {
+  max-width: 620px;
+  max-height: 260px;
+  overflow: auto;
+  padding: 12px;
+  border-radius: 7px;
+  background: #f4f7fb;
+  color: #344b68;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.log-file {
+  color: #718096;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
